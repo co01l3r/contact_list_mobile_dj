@@ -7,7 +7,7 @@
         <form class="search-bar">
             <input type="search-name" class="contact-search" name="search-area" placeholder="search">
         </form>
-        <a href="">
+        <a href="{% url 'new' %}">
         <i class="fa-solid fa-user-plus"></i>
         </a>
     </header>
@@ -15,6 +15,8 @@
         <ul class="contacts-list">
 
             <a href="../contacts/templates/contacts/contact_profile.html"><div class="contact-section">
+
+
                 <li class="list__item">
                     <p class="contact-name">Name Surname</p>
                 </li>
@@ -22,6 +24,8 @@
                 <li class="list__item">
                     <i class="fa-solid fa-phone"></i>
                 </li>
+
+
             </div></a>
 
         </ul>

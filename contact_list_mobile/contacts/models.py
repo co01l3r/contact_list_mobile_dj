@@ -5,6 +5,7 @@ from birthday import BirthdayField, BirthdayManager
 # Create your models here.
 class Contact(models.Model):
     name = models.CharField(max_length=300, blank=False)
+    phone = models.CharField(max_length=20, null=True, blank=True)
     email = models.EmailField(max_length=200, null=True, blank=True)
     web = models.CharField(max_length=400, null=True, blank=True)
     note = models.CharField(max_length=500, null=True, blank=True)

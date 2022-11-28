@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Contact
 
 
 # Create your views here.
@@ -7,6 +8,18 @@ def index(request):
 
 
 def add_contact(request):
+    if request.method == 'POST':
+        new_contact = Contact(
+            name=request.POST['name'],
+            phone=request.POST['phone'],
+            email=request.POST['email'],
+            web=request.POST['web'],
+            birthday=request.POST['birthday'],
+            note=request.POST['note'],
+        )
+        new_contact.save()
+    return render(request, 'contacts/edit_contact.html')
+
     # form = ContactForm()
     #
     # if request.method == 'POST':
@@ -15,4 +28,4 @@ def add_contact(request):
     #         form.save()
     #
     # context = {'form': form}
-    return render(request, 'contacts/edit_contact.html')
+    # return render(request, 'contacts/edit_contact.html')
