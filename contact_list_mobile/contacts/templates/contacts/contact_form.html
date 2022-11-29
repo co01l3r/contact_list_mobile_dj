@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../../../static/styles/style.css">
+    <script src="https://kit.fontawesome.com/86fd3fc0e8.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Edit Contact</title>
+</head>
+<body>
+{% extends  'main.html' %}
+{% block content %}
+
+<div class="container">
+    <header class="header">
+
+        <a href="{% url 'index' %}">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <div class="hero-info">
+<!--            <input type="text" class="type" name="name" placeholder="name">-->
+            <h1>NAME NAME</h1>
+        </div>
+
+    </header>
+
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+    <section class="contact-info">
+
+        <ul class="info-line">
+            <i class="fa-solid fa-user"></i>
+            <li>{{form.name}}</li>
+            <i class="fa-solid fa-phone"></i>
+            <li>{{form.phone}}</li>
+            <i class="fa-solid fa-envelope"></i>
+            <li>{{form.email}}</li>
+            <i class="fa-solid fa-globe"></i>
+            <li>{{form.web}}</li>
+            <i class="fa-solid fa-cake-candles"></i>
+            <li>{{form.birthday}}</li>
+            <i class="fa-solid fa-clipboard"></i>
+            <li>{{form.note}}</li>
+
+            <input type="submit" value="Submit" />
+        </ul>
+
+        <div class="info-line">
+            <a href="">
+                <div class="update-contact-button">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+            </a>
+        </div>
+
+    </section>
+    </form>
+
+</div>
+
+{% endblock %}
+</body>
+</html>
