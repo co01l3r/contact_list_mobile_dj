@@ -28,10 +28,10 @@
         {% csrf_token %}
     <section class="contact-info">
 
-        <ul class="info-line">
+        <ul class="add-contact">
             <i class="fa-solid fa-user"></i>
             <li>{{form.name}}</li>
-            <i class="fa-solid fa-phone"></i>
+            <i class="fa-solid fa-phone fa-phonex"></i>
             <li>{{form.phone}}</li>
             <i class="fa-solid fa-envelope"></i>
             <li>{{form.email}}</li>
@@ -42,16 +42,9 @@
             <i class="fa-solid fa-clipboard"></i>
             <li>{{form.note}}</li>
 
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Save" class="form-btn" />
         </ul>
 
-        <div class="info-line">
-            <a href="">
-                <div class="update-contact-button">
-                    <i class="fa-solid fa-user-check"></i>
-                </div>
-            </a>
-        </div>
 
     </section>
     </form>
