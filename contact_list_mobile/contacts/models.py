@@ -11,6 +11,7 @@ class Contact(models.Model):
     web = models.CharField(max_length=400, null=True, blank=True)
     note = models.CharField(max_length=500, null=True, blank=True)
     birthday = BirthdayField(auto_now_add=False, auto_now=False, null=True, blank=True)
+    objects = BirthdayManager()
 
     class Meta:
         ordering = ['name']
