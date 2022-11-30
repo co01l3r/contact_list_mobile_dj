@@ -99,7 +99,7 @@ a {
 }
 
 .fa-user, .fa-phonex, .fa-envelope, .fa-globe, .fa-cake-candles, .fa-clipboard {
-    font-size: 2.5em;
+    font-size: 2.2em;
     padding: 0.1em;
 }
 
@@ -123,4 +123,9 @@ a {
 
 .form-btn:hover {
     background-color: #4CAF50;
+}
+
+.messages {
+    list-style-type: none;
+    text-align: center;
 }
