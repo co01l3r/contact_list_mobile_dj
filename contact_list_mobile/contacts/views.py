@@ -31,10 +31,30 @@ def add_contact(request):
     return render(request, 'contacts/contact_form.html', context)
 
 
-# def show_contact(request):
-#     birthdays_upcoming = Contact.objects.get_upcoming_birthdays()
-#     birthdays_today = Contact.objects.objects.get_birthdays()
-#
-#     context = {'birthday_today': birthday_today, 'birthday_upcoming': birthday_upcoming}
-#     return render(request, 'contacts/contact_profile.html', context)
+def contact_details(request, pk):
+    contact = Contact.objects.get(id=pk)
+
+    context = {'contact': contact}
+    return render(request, 'contacts/contact_details.html', context)
+
+
+def contact_update(request, pk):
+    contact = Contact.objects.get(id=pk)
+    form = ContactForm(request.POST or None, instance=contact)
+
+    if request.method == 'POST':
+
+        print(request.POST)
+
+        form = ContactForm(request.POST, instance=contact)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Contact added')
+            # return redirect(request, 'index')
+        else:
+            form = ContactForm(instance=contact)
+
+    context = {'form': form}
+    return render(request, 'contacts/contact_form.html', context)
+
 
