@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
 from .forms import ContactForm
 from django.contrib import messages
-from django.shortcuts import redirect
+from django.shortcuts import redirect, reverse
 from .models import Contact
 import datetime
+from django.http import HttpResponseRedirect
 
 
 # Create your views here.
@@ -25,7 +26,7 @@ def add_contact(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Contact added')
-            # return redirect(request, 'index')
+            return HttpResponseRedirect('/')
 
     context = {'form': form}
     return render(request, 'contacts/contact_form.html', context)
@@ -49,12 +50,12 @@ def contact_update(request, pk):
         form = ContactForm(request.POST, instance=contact)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Contact added')
-            # return redirect(request, 'index')
+            messages.success(request, 'Contact updated')
+            return HttpResponseRedirect('/')
         else:
             form = ContactForm(instance=contact)
 
-    context = {'form': form}
+    context = {'form': form, 'contact': contact}
     return render(request, 'contacts/contact_form.html', context)
 
 

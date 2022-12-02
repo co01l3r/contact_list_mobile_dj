@@ -20,6 +20,7 @@ class ContactForm(forms.ModelForm):
         'placeholder': 'john.doe@email.com',
     }))
     web = forms.URLField(required=False, widget=forms.URLInput(attrs={
+        'type': 'url',
         'placeholder': 'www.johndoe.com',
     }))
     note = forms.CharField(required=False, widget=forms.Textarea(attrs={

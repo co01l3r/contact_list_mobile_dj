@@ -62,6 +62,7 @@
 
         <div class="contact-update">
         <a href="{% url 'update' contact.id %}">
+            <input type="hidden" name="next" value="{{ request.path }}">
             <i class="fa-solid fa-user-pen"></i>
         </a>
 

@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="../../../static/styles/style.css">
     <script src="https://kit.fontawesome.com/86fd3fc0e8.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <title>Edit Contact</title>
+    <title>Contact Details</title>
 </head>
 <body>
 {% extends  'main.html' %}
@@ -18,8 +18,11 @@
         </a>
 
         <div class="hero-info">
-<!--            <input type="text" class="type" name="name" placeholder="name">-->
-            <h1>NAME NAME</h1>
+            {% if contact.name %}
+            <h1>{{contact.name}}</h1>
+            {% else %}
+            <h1>New contact</h1>
+            {% endif %}
         </div>
 
     </header>
@@ -31,7 +34,7 @@
         <ul class="add-contact">
             <i class="fa-solid fa-user"></i>
             <li>{{form.name}}</li>
-            <i class="fa-solid fa-phone fa-phonex"></i>
+            <i class="fa-solid fa-phone"></i>
             <li>{{form.phone}}</li>
             <i class="fa-solid fa-envelope"></i>
             <li>{{form.email}}</li>

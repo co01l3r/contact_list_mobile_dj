@@ -21,6 +21,7 @@ body {
     background: linear-gradient(90deg, rgba(66,159,124,1) 0%, rgba(161,193,78,1) 100%);
     padding: 2em 0;
     align-items: center;
+    align-content: center;
 }
 
 .contact-search {
@@ -98,9 +99,13 @@ a {
     padding: 1.5em;
 }
 
-.fa-user, .fa-phonex, .fa-envelope, .fa-globe, .fa-cake-candles, .fa-clipboard {
-    font-size: 2.2em;
+.fa-user, .fa-phone, .fa-envelope, .fa-globe, .fa-cake-candles, .fa-clipboard {
+    font-size: 2.1em;
     padding: 0.1em;
+}
+
+.fa-phone-menu {
+    font-size: 1.5em;
 }
 
 .add-contact {
@@ -128,4 +133,8 @@ a {
 .messages {
     list-style-type: none;
     text-align: center;
+}
+
+.contact-number, .contact-email, .contact-website, .contact-birthday, .contact-note {
+    font-size: 1em;
 }
