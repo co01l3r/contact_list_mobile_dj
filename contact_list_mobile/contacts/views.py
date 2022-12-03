@@ -59,3 +59,12 @@ def contact_update(request, pk):
     return render(request, 'contacts/contact_form.html', context)
 
 
+def contact_delete(request, pk):
+    contact = Contact.objects.get(id=pk)
+
+    if request.method == 'POST':
+        contact.delete()
+        messages.success(request, 'Contact deleted')
+        return HttpResponseRedirect('/')
+
+

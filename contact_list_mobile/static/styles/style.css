@@ -90,13 +90,8 @@ a {
 
 .contact-update {
     display: flex;
-    flex-flow: row;
-    align-items: center;
-}
-
-.fa-user-pen, .fa-user-minus, .fa-user-check{
-    font-size: 3em;
-    padding: 1.5em;
+    align-content: center;
+    margin-left: 2.9em;
 }
 
 .fa-user, .fa-phone, .fa-envelope, .fa-globe, .fa-cake-candles, .fa-clipboard {
