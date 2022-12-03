@@ -9,9 +9,14 @@ from django.http import HttpResponseRedirect
 
 # Create your views here.
 def index(request):
-    contacts = Contact.objects.all()
+    search_input = request.GET.get('search-area')
 
-    context = {'contacts': contacts}
+    if search_input:
+        contacts = Contact.objects.filter(name__icontains=search_input)
+    else:
+        contacts = Contact.objects.all()
+
+    context = {'contacts': contacts, 'search_input': search_input}
     return render(request, 'index.html', context)
 
 
