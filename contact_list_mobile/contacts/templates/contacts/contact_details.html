@@ -61,14 +61,15 @@
         {% endif %}
 
         <div class="contact-update">
+
+            <form method="GET" action="{% url 'update' contact.id %}">
+                {% csrf_token %}
+                <input type="submit" value="Update" class="form-btn"/>
+            </form>
+
             <form method="POST" action="{% url 'delete' contact.id %}">
                 {% csrf_token %}
                 <input type="submit" value="Delete" class="form-btn"/>
-            </form>
-
-            <form method="POST" action="{% url 'update' contact.id %}">
-                {% csrf_token %}
-                <input type="submit" value="Update" class="form-btn"/>
             </form>
         </div>
 
