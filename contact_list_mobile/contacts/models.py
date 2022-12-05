@@ -1,5 +1,4 @@
 from django.db import models
-from birthday import BirthdayField, BirthdayManager
 from phonenumber_field.modelfields import PhoneNumberField
 
 

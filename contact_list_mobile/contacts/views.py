@@ -1,18 +1,14 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from .forms import ContactForm
 from django.contrib import messages
-from django.shortcuts import redirect, reverse
 from .models import Contact
-import datetime
 from django.http import HttpResponseRedirect
 from django.utils import timezone
-from datetime import timedelta
 
 
 # Create your views here.
 def index(request):
     search_input = request.GET.get('search-area')
-
     datetime_now = timezone.now()
     birthdays_today = Contact.objects.all().filter(birthday__day=datetime_now.day, birthday__month=datetime_now.month)
 
@@ -29,8 +25,6 @@ def add_contact(request):
     form = ContactForm()
 
     if request.method == 'POST':
-
-        print(request.POST)
 
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -57,8 +51,6 @@ def contact_update(request, pk):
 
     if request.method == 'POST':
 
-        print(request.POST)
-
         form = ContactForm(request.POST, instance=contact)
         if form.is_valid():
             form.save()
@@ -79,5 +71,3 @@ def contact_delete(request, pk):
         contact.delete()
         messages.success(request, 'Contact deleted')
         return HttpResponseRedirect('/')
-
-
