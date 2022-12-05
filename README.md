@@ -1,5 +1,5 @@
 # contact_list_mobile
-Simple contact list app. Can store and provide basic personal information, where each one is validated and cannot be stored invalid, however it can be left empty. To change the default phone area code rather delete, or edit the highlighted part accordingly.
+Simple contact list app. Can store and provide basic personal information, where each one except 'name' and 'note' is validated and cannot be stored invalid, however it can be left empty except 'name'. To change the default phone area code rather delete, or edit the highlighted part accordingly.
 
 ```forms.py```
 
