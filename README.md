@@ -15,7 +15,7 @@ from project folder:
 
 (<env_name>) $ python3 manage.py runserver
 ```
-#### create, update, delete:
+#### create, read, update, delete:
 ![create](https://user-images.githubusercontent.com/25802489/205765317-b76bd9f8-2d66-42ff-b2b7-66867c9fd815.gif)
 ![details](https://user-images.githubusercontent.com/25802489/205765427-b036c09c-a20a-4d2e-8d96-fb40d831bce6.gif)
 ![update](https://user-images.githubusercontent.com/25802489/205765963-a278f8b2-77e5-4e78-bb29-1b5a87a2a989.gif)
