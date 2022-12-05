@@ -30,13 +30,16 @@
                     <p class="contact-name">{{contact.name | title }}</p>
                 </li>
 
+                {% if contact in birthdays_today %}
                 <li class="list__item">
-
-                    <i class="fa-solid fa-phone fa-phone-menu"></i>
-
-<!--                    <i class="fa-solid fa-cake-candles"></i>-->
-
+                    <i class="fa-solid fa-cake-candles fa-cake-menu"></i>
                 </li>
+                {% else %}
+                <li class="list__item">
+                    <i class="fa-solid fa-phone fa-phone-menu"></i>
+                </li>
+                {% endif %}
+
 
             </div></a>
             {% endfor %}
