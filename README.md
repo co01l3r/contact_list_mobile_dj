@@ -1,4 +1,6 @@
 # contact_list_mobile
+![GitHub last commit](https://img.shields.io/github/last-commit/co01l3r/contact_list_mobile_dj)
+
 Simple contact list app. Can store and provide basic personal information, where each one except 'name' and 'note' is validated and cannot be stored invalid, however it can be left empty except 'name'. To change the default phone area code rather delete, or edit the highlighted part accordingly.
 
 ```forms.py```
@@ -24,3 +26,7 @@ from project folder:
 ![search](https://user-images.githubusercontent.com/25802489/205766378-ec1bd7a1-b7b1-4bbf-8937-a14af07149db.gif)
 #### contacts having birthday today:
 ![bday](https://user-images.githubusercontent.com/25802489/205766796-517e7625-c805-4346-9e5f-2e6c36a7e1c3.jpg)
+
+![GitHub repo size](https://img.shields.io/github/repo-size/co01l3r/contact_list_mobile_dj)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/co01l3r/contact_list_mobile_dj)
+![GitHub repo file count](https://img.shields.io/github/directory-file-count/co01l3r/contact_list_mobile_dj)
